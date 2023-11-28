@@ -1,6 +1,5 @@
 import React from 'react';
 
-import logo from './logo.svg';
 import './Global CSS/App.css';
 import { Button } from 'react-bootstrap';
 import Header from './Global Components/Header';
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header></Header>
-        <h1>BuyMe</h1>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
