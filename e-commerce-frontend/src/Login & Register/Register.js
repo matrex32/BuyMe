@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Global Components/Header';
 
 
 function Register() {
@@ -7,6 +8,12 @@ function Register() {
     const[email, setEmail] = useState("")
     const[password, setPassword] = useState("")
     const navigate=useNavigate()
+
+    useEffect(()=>{
+        if(localStorage.getItem('user-info')) {
+            navigate("/add")
+        }
+    }, [])
 
     async function signUp() {
         let item = {name, email, password}
@@ -26,6 +33,8 @@ function Register() {
     }
 
     return (
+        <>
+        <Header/>
         <div className="col-sm-6 offset-sm-3">
             <h1>Register</h1>
             <input type="text" value={name} onChange ={(e)=>setName(e.target.value)} className="form-control" placeholder='name'/>
@@ -39,6 +48,7 @@ function Register() {
 
 
         </div>
+        </>
     )
 }
 

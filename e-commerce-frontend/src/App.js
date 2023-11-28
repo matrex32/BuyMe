@@ -8,16 +8,16 @@ import Login from './Login & Register/Login';
 import Register from './Login & Register/Register';
 import AddProduct from './Product Component/AddProduct';
 import UpdateProduct from './Product Component/UpdateProduct';
+import Protected from './Protected/Protected';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header></Header>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/add" element={<AddProduct />} />
+          <Route path="/add" element={<Protected Cmp={AddProduct} />} />
           <Route path="/update" element={<UpdateProduct />} />
         </Routes>
       </BrowserRouter>
