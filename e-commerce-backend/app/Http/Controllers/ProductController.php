@@ -18,4 +18,13 @@ class ProductController extends Controller
 
         return $product;
     }
+
+    function list() {
+
+        return Product::all();
+    }
+
+    function delete($id) {
+        return $id;
+    }
 }
