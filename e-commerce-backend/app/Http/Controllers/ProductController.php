@@ -25,6 +25,11 @@ class ProductController extends Controller
     }
 
     function delete($id) {
-        return $id;
+        $result = Product::where('id', $id)->delete();
+        if($result){
+            return ["result"=>"product has been deleted"];
+        } else {
+            return ["result"=>"This product doesn't exists"];
+        }
     }
 }
