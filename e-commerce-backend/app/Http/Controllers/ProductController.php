@@ -32,4 +32,8 @@ class ProductController extends Controller
             return ["result"=>"This product doesn't exists"];
         }
     }
+
+    function getProduct($id) {
+        return Product::find($id);
+    }
 }
