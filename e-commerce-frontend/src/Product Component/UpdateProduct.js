@@ -1,13 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Global Components/Header';
+import { useParams } from 'react-router-dom';
 
 function UpdateProduct() {
+    const [data, setData] = useState({
+        name: '',
+        price: '',
+        description: '',
+        file_path: ''
+    });
+    const { id } = useParams(); // Obțineți ID-ul din URL
+
+    useEffect(() => {
+        async function fetchData() {
+            let result = await fetch(`http://localhost:8000/api/product/${id}`);
+            result = await result.json();
+            setData(result);
+        }
+
+        fetchData();
+    }, [id]); // Adăugați ID-ul ca dependență pentru useEffect
+
+    async function updateProduct() {
+        // Logica pentru actualizarea produsului
+        // Va trebui să implementați această funcție în funcție de API-ul dvs.
+    }
+
     return (
         <div>
             <Header/>
             <h1>Update Product</h1>
+            <div className="form-group">
+                <input 
+                    type='text' 
+                    value={data.name} 
+                    onChange={(e) => setData({ ...data, name: e.target.value })} 
+                    className='form-control' 
+                />
+                <br/>
+                <input 
+                    type='text' 
+                    value={data.price} 
+                    onChange={(e) => setData({ ...data, price: e.target.value })} 
+                    className='form-control' 
+                />
+                <br/>
+                <input 
+                    type='text' 
+                    value={data.description} 
+                    onChange={(e) => setData({ ...data, description: e.target.value })} 
+                    className='form-control' 
+                />
+                <br/>
+                <input 
+                    type='file' 
+                    onChange={(e) => setData({ ...data, file_path: e.target.files[0] })} 
+                    className='form-control' 
+                />
+                <br/>
+                {data.file_path && (
+                    <img 
+                        style={{width: 100}} 
+                        src={"http://localhost:8000/" + data.file_path} 
+                        alt={data.name} 
+                    />
+                )}
+                <br/>
+                <button onClick={updateProduct} className="btn btn-primary">Update Product</button>
+            </div>
         </div>
-    )
+    );
 }
 
 export default UpdateProduct;

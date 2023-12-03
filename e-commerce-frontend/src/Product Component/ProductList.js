@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Global Components/Header';
 import { Table } from 'react-bootstrap';
 import '../Global CSS/App.css';
+import {Link} from 'react-router-dom';
 
 function ProductList() {
     const [data, setData] = useState([]);
@@ -51,6 +52,11 @@ function ProductList() {
                                 <td>{item.description}</td>
                                 <td><img style={{width: 100}} src={"http://localhost:8000/" + item.file_path} alt={item.name} /></td>
                                 <td><span onClick={()=> deleteOperation(item.id)} className='delete'>Delete</span></td>
+                                <td>
+                                    <Link to={"update/"+item.id}>
+                                    <span className='update'>Update</span>
+                                    </Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
