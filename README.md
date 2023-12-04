@@ -26,4 +26,11 @@ This E-Commerce application is a comprehensive solution for managing products in
 4. Run the backend server (e.g., using `php artisan serve` for Laravel).
 5. Run the React application (`npm start`).
 
+   
+![p1](https://github.![p2](https://github.com/matrex32/BuyMe/assets/118893406/530308e7-cafc-4a65-a0d6-763982897940)
+![p2](https://github.com/matrex32/BuyMe/assets/118893406/759ef926-0cc1-43c7-80b3-9e0dd7ea0da5)
+
+![p3](https://github.com/matrex32/BuyMe/assets/118893406/5e8c9ba5-7357-44a9-a460-eea3578b0e77)
+![p4](https://github.com/matrex32/BuyMe/assets/118893406/a042d7d1-ead9-4572-8eb2-f667d51257e9)
+
 
