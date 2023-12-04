@@ -1,5 +1,4 @@
 # BuyMe
- # E-Commerce Application
 
 ## Description
 This E-Commerce application is a comprehensive solution for managing products in an online store. It allows users to register, log in, add, update, search, and view products. The application is built using React for the frontend and Laravel for the backend, providing a smooth and interactive user experience.
