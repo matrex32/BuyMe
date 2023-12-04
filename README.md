@@ -27,10 +27,17 @@ This E-Commerce application is a comprehensive solution for managing products in
 5. Run the React application (`npm start`).
 
    
-![p1](https://github.![p2](https://github.com/matrex32/BuyMe/assets/118893406/530308e7-cafc-4a65-a0d6-763982897940)
-![p2](https://github.com/matrex32/BuyMe/assets/118893406/759ef926-0cc1-43c7-80b3-9e0dd7ea0da5)
+![p1](https://github.com/matrex32/BuyMe/assets/118893406/aea9f0fc-91c9-4a40-913b-d4be5e2608eb)
 
-![p3](https://github.com/matrex32/BuyMe/assets/118893406/5e8c9ba5-7357-44a9-a460-eea3578b0e77)
-![p4](https://github.com/matrex32/BuyMe/assets/118893406/a042d7d1-ead9-4572-8eb2-f667d51257e9)
+![p2](https://github.com/matrex32/BuyMe/assets/118893406/1721dbc4-aa8b-478e-8c5a-f36c9e8a5a84)
+
+![p3](https://github.com/matrex32/BuyMe/assets/118893406/80617ec9-d13d-4574-934e-d0d1fa41205f)
+
+![p4](https://github.com/matrex32/BuyMe/assets/118893406/55d01188-c537-451d-82aa-f9bc441ed9d6)
+
+
+
+
+
 
 
