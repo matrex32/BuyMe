@@ -16,14 +16,28 @@ use App\Http\Controllers\ProductController;
 |
 */
 
+// Returns the authenticated user's details
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('register',[UserController::class,'register']);
-Route::post('login',[UserController::class,'login']);
-Route::post('addproduct',[ProductController::class,'addProduct']);
-Route::get('list',[ProductController::class,'list']);
-Route::delete('delete/{id}',[ProductController::class,'delete']);
-Route::get('product/{id}',[ProductController::class,'getProduct']);
-Route::get('search/{key}',[ProductController::class,'search']);
+// User registration
+Route::post('register', [UserController::class, 'register']);
+
+// User login
+Route::post('login', [UserController::class, 'login']);
+
+// Adds a new product
+Route::post('addproduct', [ProductController::class, 'addProduct']);
+
+// Retrieves a list of all products
+Route::get('list', [ProductController::class, 'list']);
+
+// Deletes a product by ID
+Route::delete('delete/{id}', [ProductController::class, 'delete']);
+
+// Retrieves a single product by ID
+Route::get('product/{id}', [ProductController::class, 'getProduct']);
+
+// Searches for products by a key in their names
+Route::get('search/{key}', [ProductController::class, 'search']);

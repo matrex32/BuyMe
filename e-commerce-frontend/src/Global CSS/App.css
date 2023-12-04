@@ -1,18 +1,30 @@
-.App {
+/**
+ * Styles for the main application container.
+ */
+ .App {
   text-align: center;
 }
 
+/**
+ * Styles for the application logo.
+ */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/**
+ * Animation for the application logo when motion is not reduced.
+ */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/**
+ * Styles for the application header.
+ */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,13 +36,23 @@
   color: white;
 }
 
-.navbar_wrapper a{
+/**
+ * Styles for navigation bar links.
+ */
+.navbar_wrapper a {
   padding-left: 30px;
 }
+
+/**
+ * Styles for application links.
+ */
 .App-link {
   color: #61dafb;
 }
 
+/**
+ * Styles for delete buttons or indicators.
+ */
 .delete {
   background-color: firebrick;
   color: aliceblue;
@@ -39,6 +61,9 @@
   cursor: pointer;
 }
 
+/**
+ * Styles for update buttons or indicators.
+ */
 .update {
   background-color: green;
   color: aliceblue;
@@ -47,6 +72,9 @@
   cursor: pointer;
 }
 
+/**
+ * Keyframes for the spinning animation of the application logo.
+ */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
